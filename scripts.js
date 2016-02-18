@@ -24,14 +24,37 @@ var fish = new Character ("Fish the Dragon",
 	"Don't be fooled by her looks, though she looks cute and tame beneath the visage is a fire-breathing dragon. No one knows why she looks like a fish.", 
 	"../img/characters/fish.png")
 
-var characters = [pig, dog, turtle, crow, fish]
+var characters = [pig, dog, turtle, crow, fish];
 
-function randomize() {
-	var x = Math.random() * characters.length;
-	var y = Math.floor(x);
-	console.log(characters[y].name);
+var charsAvailable = [];
+
+var isInArray = function(value, array) {
+	return array.indexOf(value) > -1;
 }
 
-randomize();
+var randomizeChars = function() {
+	while(charsAvailable.length < 4) {
+		var x = Math.random() * characters.length;
+		var y = Math.floor(x);
+		var result = characters[y].name;
+		if (isInArray(result, charsAvailable)) {
+			continue;
+		} else {
+			charsAvailable.push(result);
+		}
+	}
+}
+randomizeChars();
+
+// Add randomized character to a grid/the selection area
+var addChar = function(charArray) {
+	for (var i = 0; i < charsAvailable.length; i++) {
+		//Create each div, image, name, description
+		//Append it to the HTML doc inside the class inner
+	}
+}
+
+addChar(charsAvailable);
+
 
 
