@@ -29,13 +29,15 @@ h2 {
 
 
 .character img {
-	width: 10em;
+	max-width: 15em;
 	height: 10em;
 }
 
 .character {
 	border: solid #eee 8px;
 	padding: 1em;
+	width: 48%;
+	height: 20em;
 }
 
 .character:hover {
