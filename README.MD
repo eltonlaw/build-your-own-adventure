@@ -2,7 +2,7 @@ BUILD YOUR OWN ADVENTURE
 
 =====
 
-This is a one page build your own adventure app.
+This is a one page build your own adventure app, built with angular.
 
 Crow image from: https://www.pinterest.com/source/drawinghowtodraw.com
 Pig image from:http://icliparts.com/clipart/38942

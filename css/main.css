@@ -28,7 +28,7 @@ h2 {
 }
 
 
-.character img {
+.charImg {
 	max-width: 15em;
 	height: 10em;
 }
@@ -36,10 +36,12 @@ h2 {
 .character {
 	border: solid #eee 8px;
 	padding: 1em;
-	width: 48%;
+	width: 80%;
 	height: 20em;
+	margin: auto;
 }
 
 .character:hover {
-	border: solid black 8px
+	border: solid yellow 8px;
+
 }
