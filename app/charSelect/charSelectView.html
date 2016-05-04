@@ -1,0 +1,10 @@
+<h1 class="title">Character Selection</h1>
+<div ng-controller="CharSelectCtrl as vmi" >
+	<div ng-repeat="char in vmi.availableCharacters">
+	  <div class="characterCard" ng-click="vm.nextScene(1);vm.setCharacter(char.id)">
+	  	<img ng-src="{{char.image}}" alt="{{char.name}} Image">
+	  	<h3>{{char.name}}</h3>
+	  	<p>{{char.description}}</p>
+	  </div>
+	</div>
+</div>

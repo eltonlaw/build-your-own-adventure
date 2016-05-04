@@ -1,0 +1,53 @@
+#titleBar {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	padding: 1em;
+	z-index: 10000;
+	background-color: #eee;
+}
+
+#headerTitle {
+	font-variant: small-caps;
+	font-weight: 700;
+	margin: 0;
+}
+.title {
+	font-size: 3em;
+	font-weight:700;
+	text-align: center;
+}
+
+.marginTop {
+	margin-top:1em;
+}
+
+/* Removes Style for 'Build Your Own Adventure*/
+.removeLinkStyle, 
+.removeLinkStyle:hover,
+.removeLinkStyle:visited {
+	color: black;
+	text-decoration: none;
+}
+
+/* CHARACTER SELECTION */
+.characterCard {
+	width: 50%;
+	height:30em;
+	float:left;
+	border:1em solid #eee;
+	padding: 1em;
+}
+.characterCard:hover {
+	border:1em solid gray;
+}
+
+
+.characterCard img {
+	max-width: 25em;
+	display: block;
+	margin: auto;
+	height:50%;
+}

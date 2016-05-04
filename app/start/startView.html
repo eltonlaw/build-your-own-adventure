@@ -1,0 +1,7 @@
+<h1 class="title">Build Your Own Adventure</h1>
+<div ng-controller="StartCtrl as vmi">
+	<div ng-repeat="option in vmi.options">
+		<li><button ng-click="vm.nextScene(0)">{{option.name}}</button></li>
+	</div>
+</div>
+

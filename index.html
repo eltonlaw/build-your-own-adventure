@@ -1,35 +1,74 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="adventureBuilder">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" ng-app="app">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<script data-require="angularjs@1.5.0" data-semver="1.5.0" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Stylesheets -->
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+	<!-- Main.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<!-- Angular -->
+	<script data-require="angularjs@1.5.3" data-semver="1.5.3" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.js"></script>
+	<!-- Angular Route -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-route.js"></script>
+<!-- UI Boostrap -->
+	<!-- Angular Animate -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-animate.js"></script>
+	<!-- Angular Touch -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-touch.js"></script>
+	<!-- Angular UI Boostrap Templates -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.min.js"></script>
 	</head>
-	<body>
-		<nav class="fixed-nav-bar">
-			<h1 id="title">Build your own Adventure</h1>
-			By: Elton
-		</nav>
-<section id="storyboard" ng-controller="Characters">
-	<div class="container">
-		<h2>{{title}}</h2>
-		<div ng-repeat="char in availableCharacters">
-			<char-sel info="char"></char-sel>
-		</div>
-	</div>
-</section>
-	<script type="text/javascript" src="js/shared/commonFunctions.js"></script>
 
-	<!-- Modules -->
-	<script type="text/javascript" src="js/app.js"></script>
+<body>
 
-	<!-- Controllers -->
-	<script type="text/javascript" src="js/controllers/characters.js"></script>
+
+
+<!-- START CONTENT -->
+
+<nav class="fixed-nav-bar" id="titleBar">
+	<h1 id="headerTitle"><a class="removeLinkStyle">Build your own Adventure</h1></a>
+	By: Elton
+</nav>
+
+<div class="container marginTop" ng-controller="MainCtrl as vm">
+	<scene-start ng-if="vm.sceneNo =='start'"></scene-start>
+	<scene0 ng-if="vm.sceneNo == 0"></scene0>
+	<scene1 ng-if="vm.sceneNo == 1"></scene1>
+	<scene2 ng-if="vm.sceneNo == 2"></scene2>
+	<scene3 ng-if="vm.sceneNo == 3"></scene3>
+</div>
+
+<!-- END CONTENT -->
+
+
+
+
+<!-- SCRIPTS -->
+
+<!-- App Module -->
+	<script type="text/javascript" src="app/app.module.js"></script>
 	
-	<!-- Directives -->
-	<script type="text/javascript" src="js/directives/charSelection.js"></script>
+<!-- Main -->
+	<script type="text/javascript" src="app/main/app.main.js"></script>
 
-	</body>
+	<script type="text/javascript" src="app/main/mainCtrl.js"></script>
+
+	<script type="text/javascript" src="app/main/mainService.js"></script>
+	<script type="text/javascript" src="app/main/directives.js"></script>
+<!-- Start -->
+	<script type="text/javascript" src="app/start/app.start.js"></script>
+
+	<script type="text/javascript" src="app/start/startCtrl.js"></script>
+<!-- Character Selection -->
+	<script type="text/javascript" src="app/charSelect/app.charSelect.js"></script>
+	<script type="text/javascript" src="app/charSelect/charSelectService.js"></script>
+	<script type="text/javascript" src="app/charSelect/charSelectCtrl.js"></script>
+<!-- Scene 1 -->
+	<script type="text/javascript" src="app/scene1/app.scene1.js"></script>
+	<script type="text/javascript" src="app/scene1/scene1Ctrl.js"></script>
+
+
+</body>
 </html>
