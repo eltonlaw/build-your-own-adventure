@@ -1,1 +1,18 @@
-<h4>selectedChar.html working</h4>
+<div ng-controller="ModalCtrl as vm">
+    <script type="text/ng-template" id="myModalContent.html">
+        <div ng-controller="ModalCtrl as vm">
+	        <div class="modal-header">
+	            <h3 class="modal-title">Unique Abilities</h3>
+	        </div>
+	        <div class="modal-body">
+	            <ul>
+	                <li>{{vm.charInfo.ability}}</li>
+	            </ul>
+	        </div>
+        </div>
+    </script>
+
+	<button class="btn btn-default" type="button" ng-click="vm.open(sm)">
+  Playing as...<span class="badge">{{vm.character}}</span>
+	</button>
+</div>

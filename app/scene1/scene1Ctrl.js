@@ -10,7 +10,7 @@
 	function Scene1Ctrl() {
 		var vm = this;
 		console.log('Scene1Ctrl Working!');
-		vm.link = "app/main/selectedChar.html";
+		vm.selectedCharE = "app/main/selectedChar.html";
 	};
 
 
