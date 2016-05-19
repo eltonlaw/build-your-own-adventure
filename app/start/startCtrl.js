@@ -4,8 +4,8 @@
 		.controller('StartCtrl', StartCtrl);
 
 	// StartCtrl.$inject = ['$scope'];
-	StartCtrl.$inject = ['mainService']
-	function StartCtrl(mainService){
+	StartCtrl.$inject = [];
+	function StartCtrl(){
 		/*jshint validthis: true */
 		var vm = this;
 		vm.options = [];

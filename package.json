@@ -1,0 +1,33 @@
+{
+  "name": "build-your-own-adventure",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "jasmine": "^2.4.1"
+  },
+  "devDependencies": {
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-jasmine-spec-runner-reporter": "^0.1.5",
+    "karma-mocha-reporter": "^2.0.3",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eltonlaw/build-your-own-adventure.git"
+  },
+  "author": "eltonlaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eltonlaw/build-your-own-adventure/issues"
+  },
+  "homepage": "https://github.com/eltonlaw/build-your-own-adventure#readme"
+}

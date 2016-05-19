@@ -4,9 +4,9 @@
 		.module('app.charSelect')
 		.controller('CharSelectCtrl',CharSelectCtrl);
 
-	CharSelectCtrl.$inject=['mainService','randomize'];
+	CharSelectCtrl.$inject=['randomize'];
 
-	function CharSelectCtrl(mainService, randomize) {
+	function CharSelectCtrl(randomize) {
 		var vm = this;
 		vm.characterList = [];
 		vm.availableCharacters = [];

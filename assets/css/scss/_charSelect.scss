@@ -1,0 +1,20 @@
+.characterCard {
+	@include w-h-p-m(50%,30em,1em,auto);
+	float:left;
+	border:1em solid $default-color;
+
+	&:hover{
+		border:1em solid gray;
+	}
+
+	img {
+		max-width: 25em;
+		display: block;
+		margin: auto;
+		height:50%;
+	}
+}
+
+.margin-top10 {
+	margin-top:10em;
+}

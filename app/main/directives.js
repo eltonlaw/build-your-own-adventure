@@ -11,7 +11,7 @@
 		});
 	angular
 		.module('app')
-		.directive('scene0', function() {
+		.directive('charSelect', function() {
 			return {
 				restrict: 'E',
 				templateUrl: 'app/charSelect/charSelectView.html'
@@ -20,11 +20,20 @@
 		});
 	angular
 		.module('app')
+		.directive('intro', function() {
+			return {
+				restrict: 'E',
+				templateUrl: 'app/intro/introView.html'
+				// Controller: IntroCtrl
+			}
+		});
+	angular
+		.module('app')
 		.directive('scene1', function() {
 			return {
 				restrict: 'E',
 				templateUrl: 'app/scene1/scene1View.html'
-				// Controller: Scene1Ctrl
+				// Controller: IntroCtrl
 			}
 		});
 })();

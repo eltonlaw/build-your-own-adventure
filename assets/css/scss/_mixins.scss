@@ -1,0 +1,12 @@
+/* Mixins */
+
+@mixin nav-bar-list {
+	
+}
+
+@mixin w-h-p-m($width, $height,$padding,$margin) {
+	width: $width;
+	height:$height;
+	padding:$padding;
+	margin:$margin;
+}

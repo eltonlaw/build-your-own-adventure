@@ -1,17 +1,19 @@
-(function(){
+(function() {
 	'use strict';
 
 	angular
 		.module('app.scene1')
-		.controller('Scene1Ctrl',Scene1Ctrl);
+		.controller('Scene1Ctrl', Scene1Ctrl);
 
-	// Scene1Ctrl.$inject = ['',''];
+	Scene1Ctrl.$inject = [];
 
 	function Scene1Ctrl() {
-		var vm = this;
-		console.log('Scene1Ctrl Working!');
-		vm.selectedCharE = "app/main/selectedChar.html";
-	};
+		console.log("Scene1Ctrl Working");
 
+
+
+
+
+	};
 
 })();

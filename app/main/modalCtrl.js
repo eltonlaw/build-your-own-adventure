@@ -3,12 +3,12 @@
     .module('app.main')
     .controller('ModalCtrl', ModalCtrl);
 
-    ModalCtrl.$inject=['$rootScope','mainService','$uibModal','$log'];
+    ModalCtrl.$inject=['$rootScope','characterSet','$uibModal','$log'];
 
-    function ModalCtrl ($rootScope, mainService,$uibModal, $log) {
+    function ModalCtrl ($rootScope, characterSet,$uibModal, $log) {
       var vm = this;
       vm.character = $rootScope.character;
-      vm.charInfo = mainService.getCharInfo(vm.character);
+      vm.charInfo = characterSet.getCharInfo(vm.character);
 
     vm.animationsEnabled = true;
 

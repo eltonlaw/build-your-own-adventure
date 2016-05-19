@@ -5,8 +5,8 @@
 		.module('app')
 		.controller('MainCtrl',MainCtrl);
 
-	MainCtrl.$inject = ['$rootScope','mainService', '$uibModal'];
-	function MainCtrl($rootScope, mainService, $uibModal) {
+	MainCtrl.$inject = ['characterSet', '$uibModal'];
+	function MainCtrl(characterSet, $uibModal) {
 		/*jshint validthis: true */
 		var vm = this;
 		vm.sceneNo = 'start';
@@ -14,7 +14,6 @@
 		vm.character =  "";
 		vm.setCharacter = setCharacter;
 		vm.charInfo = charInfo;
-		vm.displayCharInfo = displayCharInfo;
 
 		////////////////////////////////////////
 		function nextScene(destinationScene) {
@@ -22,14 +21,11 @@
 			console.log('Currently on vm.sceneNo: '+ vm.sceneNo);
 		};
 		function setCharacter(character) {
-			vm.character = mainService.setCharacter(character);
+			vm.character = characterSet.setCharacter(character);
 			console.log('Set Character to '+ vm.character);
 		};
 		function charInfo() { 
-			return mainService.getCharInfo(vm.character);
-		};
-		function displayCharInfo() {
-
+			return characterSet.getCharInfo(vm.character);
 		};
 
 	}

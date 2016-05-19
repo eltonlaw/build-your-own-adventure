@@ -3,8 +3,6 @@
 	angular.module('app', [
 	// Angular
 	"ngRoute", 
-
-
 	// Third Party
 	"ui.bootstrap",
 
@@ -12,6 +10,7 @@
 	"app.main", 
 	"app.start",
 	"app.charSelect",
+	"app.intro",
 	"app.scene1"
 	
 	]);
